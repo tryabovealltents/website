@@ -1,0 +1,264 @@
+HERO SECTION
+
+Tent Rentals in Calgary & Alberta
+Reliable Tents for Weddings, Festivals, Corporate Events, and Backyard Parties.
+
+Heavy-Duty Tents • Professional Setup • Fully Insured
+
+Get a Free No-Obligation Quote Today
+
+Call: 778-688-2174
+
+ABOUT SECTION
+
+Above All Tent and Party Rentals
+
+With over 10 years of experience, we help customers create unforgettable outdoor events across Calgary and surrounding areas.
+
+From backyard celebrations to large weddings and festivals, our team handles delivery, setup, and dismantling, so you can focus on enjoying the event.
+
+We use reliable, heavy-duty tents designed for Canadian weather, ensuring safety and comfort for your guests.
+
+SERVICES SECTION
+Tent Rental Services
+
+We provide tents for:
+
+Weddings
+
+Festivals
+
+Corporate events
+
+Backyard parties
+
+Community events
+
+Private celebrations
+
+What’s Included
+
+Delivery
+Professional setup
+Dismantling
+Custom tent sizing
+Event support
+
+TENT TYPES
+Frame Tents
+
+Ideal for tight spaces and patios.
+
+Pole Tents
+
+Classic event tents for large gatherings.
+
+High Peak Tents
+
+Elegant design perfect for weddings.
+
+Clear Roof Tents
+
+Premium option for luxury events.
+
+Available sizes:
+20×40
+30×60
+Custom sizing available
+
+ACCESSORIES
+
+Enhance your event with:
+
+Tables
+Chairs
+Dance floors
+Lighting
+Chandeliers
+Tent heaters
+Sidewalls
+Flooring
+
+HOW IT WORKS
+
+1 Request a Free Quote
+2 Confirm Tent Size and Availability
+3 Delivery and Setup
+4 Enjoy Your Event
+5 We Handle Pickup
+
+WHY CHOOSE US
+
+10+ Years Experience
+Fully Insured
+Affordable Pricing
+Professional Setup Team
+Reliable Equipment
+Local Business
+
+SERVICE AREA
+
+Serving:
+
+Calgary
+Airdrie
+Chestermere
+Cochrane
+Okotoks
+Surrounding Alberta areas
+
+CTA
+
+Plan Your Event Today
+Request a Free Tent Rental Estimate
+
+2. SEO Optimized Text (Important for ranking)
+
+Add this on homepage bottom.
+
+Tent Rentals in Calgary
+
+If you're searching for tent rentals in Calgary, Above All Tent and Party Rentals provides reliable tents for weddings, corporate events, festivals, and backyard parties.
+
+We deliver across Calgary and nearby Alberta areas, offering high-quality tents with professional installation and removal.
+
+Our team helps customers choose the right tent size, accessories, and setup for their event.
+
+Keywords targeted:
+tent rentals Calgary
+wedding tent rental Calgary
+party tent rental Alberta
+event tent rentals Calgary
+
+3. Landing Pages (These increase traffic)
+
+Create these pages.
+
+Wedding Tent Rentals Calgary
+
+Content focus:
+
+Elegant setups
+
+Guest capacity
+
+Lighting
+
+dance floors
+
+weather protection
+
+Backyard Party Tent Rentals
+
+Focus:
+
+small events
+
+quick setup
+
+affordable packages
+
+Festival Tent Rentals
+
+Focus:
+
+large capacity
+
+strong tents
+
+weather protection
+
+Corporate Event Tent Rentals
+
+Focus:
+
+branding
+
+professional appearance
+
+reliable logistics
+
+4. Schema Markup (Local SEO)
+
+Add this in your Next.js layout.
+
+{
+ "@context": "https://schema.org",
+ "@type": "LocalBusiness",
+ "name": "Above All Tent and Party Rentals",
+ "image": "https://yourdomain.com/hero.jpg",
+ "telephone": "+1-778-688-2174",
+ "address": {
+   "@type": "PostalAddress",
+   "addressLocality": "Calgary",
+   "addressRegion": "AB",
+   "addressCountry": "Canada"
+ },
+ "openingHours": "Mo-Su 07:00-21:00",
+ "priceRange": "$$",
+ "description": "Tent rental company providing event tents, wedding tents, and party rentals in Calgary and Alberta."
+}
+5. Conversion Structure (Very Important)
+
+Most rental websites fail here.
+
+Use this layout:
+
+Hero
+Trust signals
+Services
+Gallery
+Packages
+Process
+Testimonials
+FAQ
+CTA
+
+Conversion tips:
+
+Always show phone number in header
+Add floating quote button
+Show event photos
+Add quick quote form
+
+6. Next.js Component Structure
+
+Use this structure.
+
+components/
+Header.tsx
+Hero.tsx
+Services.tsx
+TentTypes.tsx
+Gallery.tsx
+Process.tsx
+Accessories.tsx
+WhyChooseUs.tsx
+ServiceArea.tsx
+Testimonials.tsx
+FAQ.tsx
+CTA.tsx
+Footer.tsx
+QuoteForm.tsx
+7. Page Structure (Next.js App Router)
+app/
+page.tsx
+tent-rentals/page.tsx
+wedding-tents/page.tsx
+party-tents/page.tsx
+festival-tents/page.tsx
+gallery/page.tsx
+about/page.tsx
+contact/page.tsx
+8. Advanced Idea (Most competitors don't do this)
+
+This could give your client an advantage.
+
+Add:
+
+Event cost calculator
+Tent size estimator
+Availability checker
+Instant quote system
+
+Most competitors don't have these.
