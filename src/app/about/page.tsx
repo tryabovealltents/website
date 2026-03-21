@@ -7,14 +7,14 @@ import ScrollReveal from "@/components/ScrollReveal";
 
 const founders = [
   {
-    name: "Prabhjit Singh",
+    name: "Prabh Sidhu",
     title: "Co-Founder & Operations Lead",
     photo: "/images/WhatsApp Image 2026-03-18 at 5.55.29 AM (1).jpeg",
     tagline: "The man who gets it done.",
     bio: [
-      "Prabhjit brings over a decade of real, hands-on experience in the outdoor services industry. He's not someone who learned from a textbook — he learned by doing. From managing large-scale outdoor setups to coordinating complex event logistics in unpredictable Canadian weather, Prabhjit has seen it all.",
+      "Prabh brings over a decade of real, hands-on experience in the outdoor services industry. He's not someone who learned from a textbook — he learned by doing. From managing large-scale outdoor setups to coordinating complex event logistics in unpredictable Canadian weather, Prabhjit has seen it all.",
       "His background spans tent installation, equipment management, and on-site event coordination across Calgary and surrounding Alberta communities. He knows what it takes to deliver a flawless setup — and more importantly, he knows how to solve problems fast when things don't go to plan.",
-      "Starting this business wasn't just a career move for Prabhjit. It was a chance to build something of his own — something that reflects his values of hard work, reliability, and genuine care for every client.",
+      "Starting this business wasn't just a career move for Prabh. It was a chance to build something of his own — something that reflects his values of hard work, reliability, and genuine care for every client.",
     ],
     highlights: [
       "10+ years in outdoor services",
@@ -24,14 +24,14 @@ const founders = [
     ],
   },
   {
-    name: "Gurnam Kaur",
+    name: "Gurnam Singh",
     title: "Co-Founder & Client Experience",
     photo: "/images/WhatsApp Image 2026-03-18 at 5.55.29 AM (2).jpeg",
     tagline: "The heart behind every event.",
     bio: [
-      "Gurnam is the reason clients feel taken care of from the very first call. With years of experience in customer service and community event coordination, she has a natural gift for understanding what people need — and making sure they get it.",
-      "She has supported outdoor and community events of all sizes, always bringing warmth, precision, and a genuine desire to help. Gurnam understands that behind every event is a person with a vision, and she takes that seriously.",
-      "For Gurnam, Above All isn't just a business — it's a way to serve her community and build something meaningful alongside her partner. She's committed to making every client feel like their event is the most important one we've ever done.",
+      "Gurnam is the reason clients feel taken care of from the very first call. With years of experience in customer service and community event coordination, He has a natural gift for understanding what people need — and making sure they get it.",
+      "He has supported outdoor and community events of all sizes, always bringing warmth, precision, and a genuine desire to help. Gurnam understands that behind every event is a person with a vision, and he takes that seriously.",
+      "For Gurnam, Above All isn't just a business — it's a way to serve his community and build something meaningful alongside his partner. He's committed to making every client feel like their event is the most important one we've ever done.",
     ],
     highlights: [
       "Years in customer service & coordination",
@@ -220,7 +220,7 @@ export default function AboutPage() {
                   <p className="text-slate-700 text-lg leading-relaxed italic mb-4">
                     "We have spent years working in this industry for other people. We know the work, we know the clients, and we know how to deliver. Starting Above All was about doing it our way — with more care, more commitment, and more pride in the work."
                   </p>
-                  <p className="text-amber-600 font-bold">— Prabhjit Singh</p>
+                  <p className="text-amber-600 font-bold">— Prabh Sidhu</p>
                 </div>
               </ScrollReveal>
 
@@ -232,7 +232,7 @@ export default function AboutPage() {
                   <p className="text-slate-700 text-lg leading-relaxed italic mb-4">
                     "Every event matters to someone. A wedding, a birthday, a community gathering — these are moments people remember forever. I want every client to feel like we treated their event as if it were our own."
                   </p>
-                  <p className="text-slate-700 font-bold">— Gurnam Kaur</p>
+                  <p className="text-slate-700 font-bold">— Gurnam Singh</p>
                 </div>
               </ScrollReveal>
             </div>
