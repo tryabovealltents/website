@@ -90,7 +90,7 @@ export default function Hero() {
 
 
       {/* Content */}
-      <div className="container relative z-20 mx-auto px-6 md:px-12 pt-32 pb-32">
+      <div className="container relative z-20 mx-auto px-6 md:px-12 pt-36 pb-16 md:pt-40 md:pb-24 lg:pb-20">
         <div className="max-w-4xl">
 
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter text-white mb-8 leading-[1.02]">

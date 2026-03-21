@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 
 const testimonials = [
@@ -36,16 +36,39 @@ const testimonials = [
   },
 ];
 
-const VISIBLE = 3;
+function useVisible() {
+  const [visible, setVisible] = useState(3);
+  useEffect(() => {
+    const update = () => {
+      if (window.innerWidth < 640) setVisible(1);
+      else if (window.innerWidth < 1024) setVisible(2);
+      else setVisible(3);
+    };
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, []);
+  return visible;
+}
 
 export default function Testimonials() {
   const [index, setIndex] = useState(0);
+  const visible = useVisible();
+  const total = testimonials.length;
+  const maxIndex = total - visible;
 
   const prev = () => setIndex(i => Math.max(0, i - 1));
-  const next = () => setIndex(i => Math.min(testimonials.length - VISIBLE, i + 1));
+  const next = () => setIndex(i => Math.min(maxIndex, i + 1));
+
+  // Reset index if visible count changes and index is out of bounds
+  useEffect(() => {
+    setIndex(i => Math.min(i, Math.max(0, total - visible)));
+  }, [visible, total]);
 
   const atStart = index === 0;
-  const atEnd = index >= testimonials.length - VISIBLE;
+  const atEnd = index >= maxIndex;
+
+  const gapPx = 24;
 
   return (
     <section className="py-24 md:py-32 bg-slate-50 overflow-hidden">
@@ -61,17 +84,13 @@ export default function Testimonials() {
               What Our Clients Say.
             </h2>
           </div>
-
-          {/* Arrow controls */}
-          <div className="hidden md:flex items-center gap-3">
+          <div className="flex items-center gap-3">
             <button
               onClick={prev}
               disabled={atStart}
               aria-label="Previous"
               className={`w-11 h-11 rounded-full border flex items-center justify-center transition-all duration-200 ${
-                atStart
-                  ? "border-slate-200 text-slate-300 cursor-not-allowed"
-                  : "border-slate-300 text-slate-700 hover:border-slate-900 hover:bg-slate-900 hover:text-white"
+                atStart ? "border-slate-200 text-slate-300 cursor-not-allowed" : "border-slate-300 text-slate-700 hover:border-slate-900 hover:bg-slate-900 hover:text-white"
               }`}
             >
               <ChevronLeft className="w-5 h-5" />
@@ -81,9 +100,7 @@ export default function Testimonials() {
               disabled={atEnd}
               aria-label="Next"
               className={`w-11 h-11 rounded-full border flex items-center justify-center transition-all duration-200 ${
-                atEnd
-                  ? "border-slate-200 text-slate-300 cursor-not-allowed"
-                  : "border-slate-300 text-slate-700 hover:border-slate-900 hover:bg-slate-900 hover:text-white"
+                atEnd ? "border-slate-200 text-slate-300 cursor-not-allowed" : "border-slate-300 text-slate-700 hover:border-slate-900 hover:bg-slate-900 hover:text-white"
               }`}
             >
               <ChevronRight className="w-5 h-5" />
@@ -94,14 +111,17 @@ export default function Testimonials() {
         {/* Carousel track */}
         <div className="overflow-hidden">
           <div
-            className="flex gap-6 transition-transform duration-500 ease-in-out"
-            style={{ transform: `translateX(calc(-${index} * (100% / ${VISIBLE} + 8px)))` }}
+            className="flex transition-transform duration-500 ease-in-out"
+            style={{
+              gap: `${gapPx}px`,
+              transform: `translateX(calc(-${index} * (100% / ${visible} + ${gapPx / visible}px)))`,
+            }}
           >
             {testimonials.map((t, i) => (
               <div
                 key={i}
                 className="bg-white rounded-2xl p-8 border border-slate-100 flex flex-col gap-5 shrink-0 hover:shadow-md transition-shadow duration-300"
-                style={{ width: `calc(${100 / VISIBLE}% - ${(VISIBLE - 1) * 24 / VISIBLE}px)` }}
+                style={{ width: `calc(${100 / visible}% - ${(gapPx * (visible - 1)) / visible}px)` }}
               >
                 <div className="flex gap-0.5">
                   {Array.from({ length: 5 }).map((_, s) => (
@@ -120,38 +140,9 @@ export default function Testimonials() {
           </div>
         </div>
 
-        {/* Mobile arrows */}
-        <div className="flex md:hidden items-center justify-center gap-4 mt-8">
-          <button
-            onClick={prev}
-            disabled={atStart}
-            aria-label="Previous"
-            className={`w-11 h-11 rounded-full border flex items-center justify-center transition-all duration-200 ${
-              atStart
-                ? "border-slate-200 text-slate-300 cursor-not-allowed"
-                : "border-slate-300 text-slate-700 hover:border-slate-900 hover:bg-slate-900 hover:text-white"
-            }`}
-          >
-            <ChevronLeft className="w-5 h-5" />
-          </button>
-          <span className="text-sm text-slate-400 font-medium">{index + 1} / {testimonials.length - VISIBLE + 1}</span>
-          <button
-            onClick={next}
-            disabled={atEnd}
-            aria-label="Next"
-            className={`w-11 h-11 rounded-full border flex items-center justify-center transition-all duration-200 ${
-              atEnd
-                ? "border-slate-200 text-slate-300 cursor-not-allowed"
-                : "border-slate-300 text-slate-700 hover:border-slate-900 hover:bg-slate-900 hover:text-white"
-            }`}
-          >
-            <ChevronRight className="w-5 h-5" />
-          </button>
-        </div>
-
         {/* Progress dots */}
-        <div className="hidden md:flex justify-center gap-1.5 mt-8">
-          {Array.from({ length: testimonials.length - VISIBLE + 1 }).map((_, i) => (
+        <div className="flex justify-center gap-1.5 mt-8">
+          {Array.from({ length: maxIndex + 1 }).map((_, i) => (
             <button
               key={i}
               onClick={() => setIndex(i)}
