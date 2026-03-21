@@ -18,8 +18,8 @@ export default function Footer() {
               Premium tent rentals and event accessories curated for weddings, corporate events, and festivals across Calgary and surrounding areas.
             </p>
             <div className="text-sm font-medium">
-              <a href="tel:7786882174" className="text-white hover:text-amber-400 transition-colors block mb-2">778-688-2174</a>
-              <a href="tel:7789559402" className="text-white hover:text-amber-400 transition-colors block">778-955-9402</a>
+              <a href="tel:4034933128" className="text-white hover:text-amber-400 transition-colors block mb-2">403-493-3128</a>
+              <a href="mailto:info@tryabovealltents.com" className="text-white hover:text-amber-400 transition-colors block">info@tryabovealltents.com</a>
             </div>
           </div>
           
@@ -30,6 +30,7 @@ export default function Footer() {
               <li><Link href="/tent-rentals" className="hover:text-amber-400 transition-colors">Our Tents</Link></li>
               <li><Link href="/gallery" className="hover:text-amber-400 transition-colors">Gallery</Link></li>
               <li><Link href="/contact" className="hover:text-amber-400 transition-colors">Get Started</Link></li>
+              <li><Link href="/about" className="hover:text-amber-400 transition-colors">About</Link></li>
             </ul>
           </div>
           

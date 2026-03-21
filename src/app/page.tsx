@@ -1,4 +1,5 @@
 import Accessories from "@/components/Accessories";
+import Testimonials from "@/components/Testimonials";
 import CTA from "@/components/CTA";
 import FAQ from "@/components/FAQ";
 import Hero from "@/components/Hero";
@@ -12,25 +13,28 @@ export default function Home() {
       <Hero />
       <Services />
       <TentTypes />
+      <Testimonials />
       <Accessories />
       <Process />
       <FAQ />
       <CTA />
       
       {/* SEO Bottom Section */}
-      <section className="bg-gray-50 py-16">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-4xl mx-auto prose prose-blue prose-lg text-gray-700 leading-relaxed">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Tent Rentals in Calgary</h2>
-            <p className="mb-4">
-              If you&apos;re searching for rent tents in Calgary, Above All Tent and Party Rentals provides reliable tents for weddings, corporate events, festivals, and backyard parties.
+      <section className="bg-slate-50 py-20 border-t border-slate-100">
+        <div className="container mx-auto px-6 md:px-12">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6 tracking-tight">
+              Tent Rentals in Calgary &amp; Alberta
+            </h2>
+            <p className="text-slate-600 font-light leading-relaxed mb-4 text-lg">
+              If you&apos;re searching for tent rentals in Calgary, Above All Tent and Party Rentals provides reliable, heavy-duty tents for weddings, corporate events, festivals, and backyard parties across Calgary and nearby Alberta areas.
             </p>
-            <p className="mb-4">
-              We deliver across Calgary and nearby Alberta areas, offering high-quality tents with professional installation and removal.
+            <p className="text-slate-600 font-light leading-relaxed mb-6">
+              We deliver across Calgary, Airdrie, Chestermere, Cochrane, Okotoks, and surrounding communities — offering high-quality tents with professional installation and removal. Our team helps you choose the right tent size, accessories, and setup for your event.
             </p>
-            <p>
-              Our team helps customers choose the right tent size, accessories, and setup for their event.
-            </p>
+            <a href="/about" className="inline-flex items-center text-amber-600 font-bold hover:text-amber-700 transition-colors text-sm uppercase tracking-widest border-b-2 border-amber-300 hover:border-amber-500 pb-0.5">
+              Meet the Team Behind Above All →
+            </a>
           </div>
         </div>
       </section>
