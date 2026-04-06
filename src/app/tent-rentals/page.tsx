@@ -35,7 +35,7 @@ const tents = [
     id: "clear-roof",
     title: "Clear Roof Tents",
     subtitle: "Luxury open-sky experience",
-    image: "/images/tent4.jpg",
+    image: "/images/image.png",
     description:
       "Clear roof tents offer a stunning open-sky experience while keeping guests protected from the elements. Perfect for evening events where guests can enjoy the stars, or daytime events where natural light is a priority.",
     sizes: ["20×40", "30×60", "40×80"],
