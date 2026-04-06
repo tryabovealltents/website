@@ -28,7 +28,7 @@ const tents = [
     title: "Clear Roof Tents",
     tag: "Premium",
     description: "Transparent panels let in natural light by day and showcase the stars at night. A luxury statement.",
-    image: "/images/tent4.jpg",
+    image: "/images/image.png",
     href: "/tent-rentals",
     features: ["Transparent roof", "Stargazing nights", "Up to 500 guests"],
     color: "amber",
@@ -67,7 +67,7 @@ export default function TentTypes() {
         </div>
 
         {/* Desktop: bento grid */}
-        <div className="hidden md:grid grid-cols-12 grid-rows-2 gap-4 h-[680px]">
+        <div className="hidden md:grid grid-cols-12 grid-rows-2 gap-4 h-170">
           {/* Large card — col 1-5, row 1-2 */}
           <TentCard tent={tents[0]} index={0} hovered={hovered} setHovered={setHovered} className="col-span-5 row-span-2" />
           {/* Top right — col 6-9 */}
