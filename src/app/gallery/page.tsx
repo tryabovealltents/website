@@ -18,6 +18,16 @@ const photos = [
   { src: "/images/WhatsApp Image 2026-03-18 at 5.55.29 AM (2).jpeg", category: "Backyard Parties", title: "Outdoor Party Tent", location: "Calgary, AB" },
   { src: "/images/WhatsApp Image 2026-03-18 at 5.55.29 AM (3).jpeg", category: "Corporate", title: "Corporate Gathering", location: "Airdrie, AB" },
   { src: "/images/WhatsApp Image 2026-03-18 at 5.55.29 AM (4).jpeg", category: "Weddings", title: "Intimate Wedding Tent", location: "Calgary, AB" },
+  { src: "/images/1.jpeg", category: "Backyard Parties", title: "High Peak Tent with Clear Sidewalls", location: "Calgary, AB" },
+  { src: "/images/2.jpeg", category: "Backyard Parties", title: "Above All Tent Setup – Winter Event", location: "Calgary, AB" },
+  { src: "/images/3.jpeg", category: "Backyard Parties", title: "Heated Tent for Winter Gathering", location: "Calgary, AB" },
+  { src: "/images/4.jpeg", category: "Backyard Parties", title: "Residential High Peak Tent", location: "Calgary, AB" },
+  { src: "/images/5.jpeg", category: "Backyard Parties", title: "High Peak Frame Tent – Clear Day", location: "Calgary, AB" },
+  { src: "/images/6.jpeg", category: "Backyard Parties", title: "Open-Door Tent Setup", location: "Calgary, AB" },
+  { src: "/images/7.jpeg", category: "Backyard Parties", title: "Interior Catering & Heating Setup", location: "Calgary, AB" },
+  { src: "/images/8.jpeg", category: "Backyard Parties", title: "Driveway Tent with Clear Windows", location: "Calgary, AB" },
+  { src: "/images/9.jpeg", category: "Backyard Parties", title: "Above All Party Tent – Sunny Setup", location: "Calgary, AB" },
+  { src: "/images/10.jpeg", category: "Backyard Parties", title: "High Peak Tent – Full Enclosure", location: "Calgary, AB" },
 ];
 
 export default function GalleryPage() {
@@ -39,7 +49,7 @@ export default function GalleryPage() {
           className="absolute inset-0 bg-cover bg-center opacity-25"
           style={{ backgroundImage: "url('/images/tent1.jpg')" }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/80 to-slate-900/90" />
+        <div className="absolute inset-0 bg-linear-to-b from-slate-950/80 to-slate-900/90" />
         <div className="container relative z-10 mx-auto px-6 md:px-12 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/20 border border-amber-500/30 mb-6">
             <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
@@ -89,7 +99,7 @@ export default function GalleryPage() {
                   alt={photo.title}
                   className="w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-linear-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
                     <ZoomIn className="w-5 h-5 text-white" />
