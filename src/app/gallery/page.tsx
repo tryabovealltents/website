@@ -71,6 +71,20 @@ export default function GalleryPage() {
         </div>
       </section>
 
+      {/* Featured latest images - always shown at top */}
+      <section className="py-8">
+        <div className="container mx-auto px-6 md:px-12">
+          <h3 className="text-2xl font-extrabold mb-4">Latest Uploads</h3>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+            {photos.slice(0, 5).map((p, i) => (
+              <div key={p.src} className="overflow-hidden rounded-lg bg-slate-100">
+                <img src={p.src} alt={p.title} className="w-full h-40 object-cover" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Filter + Grid */}
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-6 md:px-12">
