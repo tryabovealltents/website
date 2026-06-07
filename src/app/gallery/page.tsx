@@ -8,6 +8,13 @@ import ScrollReveal from "@/components/ScrollReveal";
 const categories = ["All", "Weddings", "Backyard Parties", "Festivals", "Corporate"];
 
 const photos = [
+  // Latest uploads first (newest at top)
+  { src: "/all_above/5.jpeg", category: "Backyard Parties", title: "High Peak Tent — Backyard", location: "Calgary, AB" },
+  { src: "/all_above/4.jpeg", category: "Backyard Parties", title: "Residential High Peak Tent", location: "Calgary, AB" },
+  { src: "/all_above/3.jpeg", category: "Backyard Parties", title: "Heated Tent — Winter Setup", location: "Calgary, AB" },
+  { src: "/all_above/2.jpeg", category: "Backyard Parties", title: "Above All Tent Setup — Winter Event", location: "Calgary, AB" },
+  { src: "/all_above/1.jpeg", category: "Backyard Parties", title: "High Peak Tent with Clear Sidewalls", location: "Calgary, AB" },
+
   { src: "/images/tent1.jpg", category: "Weddings", title: "Elegant Frame Tent Setup", location: "Calgary, AB" },
   { src: "/images/tent2.jpg", category: "Weddings", title: "High Peak Wedding Tent", location: "Airdrie, AB" },
   { src: "/images/tent3.jpg", category: "Festivals", title: "Festival Grounds Setup", location: "Calgary, AB" },

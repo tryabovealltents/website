@@ -11,6 +11,22 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-white text-gray-900">
       <Hero />
+      {/* Latest Work - small showcase of client's recent images */}
+      <section className="py-12">
+        <div className="container mx-auto px-6 md:px-12">
+          <div className="flex items-center justify-between mb-6">
+            <h3 className="text-2xl font-extrabold">Latest Work</h3>
+            <a href="/gallery" className="text-amber-600 font-bold hover:text-amber-700">View Gallery →</a>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+            <img src="/all_above/1.jpeg" alt="Above All client work 1" className="w-full h-40 object-cover rounded-lg" />
+            <img src="/all_above/2.jpeg" alt="Above All client work 2" className="w-full h-40 object-cover rounded-lg" />
+            <img src="/all_above/3.jpeg" alt="Above All client work 3" className="w-full h-40 object-cover rounded-lg" />
+            <img src="/all_above/4.jpeg" alt="Above All client work 4" className="w-full h-40 object-cover rounded-lg" />
+            <img src="/all_above/5.jpeg" alt="Above All client work 5" className="w-full h-40 object-cover rounded-lg" />
+          </div>
+        </div>
+      </section>
       <Services />
       <TentTypes />
       <Testimonials />
