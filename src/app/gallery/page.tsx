@@ -5,34 +5,32 @@ import Link from "next/link";
 import { ArrowRight, X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 
-const categories = ["All", "Weddings", "Backyard Parties", "Festivals", "Corporate"];
+const categories = ["All", "Weddings", "Backyard Parties", "Festivals", "Corporate", "Commercial", "Residential"];
 
 const photos = [
   // Latest uploads first (newest at top)
-  { src: "/all_above/5.jpeg", category: "Backyard Parties", title: "High Peak Tent — Backyard", location: "Calgary, AB" },
-  { src: "/all_above/4.jpeg", category: "Backyard Parties", title: "Residential High Peak Tent", location: "Calgary, AB" },
-  { src: "/all_above/3.jpeg", category: "Backyard Parties", title: "Heated Tent — Winter Setup", location: "Calgary, AB" },
-  { src: "/all_above/2.jpeg", category: "Backyard Parties", title: "Above All Tent Setup — Winter Event", location: "Calgary, AB" },
-  { src: "/all_above/1.jpeg", category: "Backyard Parties", title: "High Peak Tent with Clear Sidewalls", location: "Calgary, AB" },
+  { src: "/all_above/5.jpeg", category: "Driveway", title: "High Peak Tent — Residential", location: "Calgary, AB" },
+  { src: "/all_above/4.jpeg", category: "Residential", title: "Residential High Peak Tent", location: "Calgary, AB" },
+  { src: "/all_above/3.jpeg", category: "Commercial Parking", title: "Heated Tent — Winter Setup", location: "Calgary, AB" },
+  { src: "/all_above/2.jpeg", category: "Festivals", title: "Market / Festival Setup", location: "Calgary, AB" },
+  { src: "/all_above/1.jpeg", category: "Residential", title: "Commercial Parking Setup", location: "Calgary, AB" },
 
   { src: "/images/tent1.jpg", category: "Weddings", title: "Elegant Frame Tent Setup", location: "Calgary, AB" },
   { src: "/images/tent2.jpg", category: "Weddings", title: "High Peak Wedding Tent", location: "Airdrie, AB" },
   { src: "/images/tent3.jpg", category: "Festivals", title: "Festival Grounds Setup", location: "Calgary, AB" },
-  { src: "/images/tent4.jpg", category: "Corporate", title: "Clear Roof Corporate Event", location: "Chestermere, AB" },
-  { src: "/images/tent5.jpg", category: "Backyard Parties", title: "Backyard Celebration", location: "Cochrane, AB" },
+  { src: "/images/tent4.jpg", category: "Commercial", title: "Clear Roof Corporate Event", location: "Chestermere, AB" },
+  { src: "/images/tent5.jpg", category: "Commercial", title: "Backyard Celebration", location: "Cochrane, AB" },
   { src: "/images/tent6.jpg", category: "Festivals", title: "Large Pole Tent Festival", location: "Okotoks, AB" },
-  { src: "/images/WhatsApp Image 2026-03-18 at 5.55.29 AM (1).jpeg", category: "Weddings", title: "Wedding Reception Setup", location: "Calgary, AB" },
+  { src: "/images/WhatsApp Image 2026-03-18 at 5.55.29 AM (1).jpeg", category: "Festivals", title: "Wedding Reception Setup", location: "Calgary, AB" },
   { src: "/images/WhatsApp Image 2026-03-18 at 5.55.29 AM (2).jpeg", category: "Backyard Parties", title: "Outdoor Party Tent", location: "Calgary, AB" },
-  { src: "/images/WhatsApp Image 2026-03-18 at 5.55.29 AM (3).jpeg", category: "Corporate", title: "Corporate Gathering", location: "Airdrie, AB" },
+  { src: "/images/WhatsApp Image 2026-03-18 at 5.55.29 AM (3).jpeg", category: "Backyard Parties", title: "Corporate Gathering", location: "Airdrie, AB" },
   { src: "/images/WhatsApp Image 2026-03-18 at 5.55.29 AM (4).jpeg", category: "Weddings", title: "Intimate Wedding Tent", location: "Calgary, AB" },
-  { src: "/images/1.jpeg", category: "Backyard Parties", title: "High Peak Tent with Clear Sidewalls", location: "Calgary, AB" },
   { src: "/images/2.jpeg", category: "Backyard Parties", title: "Above All Tent Setup – Winter Event", location: "Calgary, AB" },
   { src: "/images/3.jpeg", category: "Backyard Parties", title: "Heated Tent for Winter Gathering", location: "Calgary, AB" },
-  { src: "/images/4.jpeg", category: "Backyard Parties", title: "Residential High Peak Tent", location: "Calgary, AB" },
   { src: "/images/5.jpeg", category: "Backyard Parties", title: "High Peak Frame Tent – Clear Day", location: "Calgary, AB" },
-  { src: "/images/6.jpeg", category: "Backyard Parties", title: "Open-Door Tent Setup", location: "Calgary, AB" },
+  { src: "/images/6.jpeg", category: "Driveway", title: "Open-Door Tent Setup", location: "Calgary, AB" },
   { src: "/images/7.jpeg", category: "Backyard Parties", title: "Interior Catering & Heating Setup", location: "Calgary, AB" },
-  { src: "/images/8.jpeg", category: "Backyard Parties", title: "Driveway Tent with Clear Windows", location: "Calgary, AB" },
+  { src: "/images/8.jpeg", category: "Driveway", title: "Driveway", location: "Calgary, AB" },
   { src: "/images/9.jpeg", category: "Backyard Parties", title: "Above All Party Tent – Sunny Setup", location: "Calgary, AB" },
   { src: "/images/10.jpeg", category: "Backyard Parties", title: "High Peak Tent – Full Enclosure", location: "Calgary, AB" },
 ];
@@ -108,7 +106,7 @@ export default function GalleryPage() {
           </ScrollReveal>
 
           {/* Masonry Grid */}
-          <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {filtered.map((photo, idx) => (
               <div
                 key={`${photo.src}-${idx}`}
