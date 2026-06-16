@@ -5,14 +5,20 @@ import Link from "next/link";
 import { ArrowRight, X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 
-const categories = ["All", "Weddings", "Bar Tables", "Tables & Chairs", "Backyard Parties", "Festivals", "Corporate", "Commercial", "Residential"];
+const categories = ["All", "Weddings", "Bar Tables", "Stage", "Tables & Chairs", "Backyard Parties", "Festivals", "Corporate", "Commercial", "Residential"];
 
 const photos = [
   // Latest uploads first (newest at top) — June 2026 furniture & setups
   { src: "/chairs/bart1.jpeg", category: "Bar Tables", title: "White Cocktail Bar Table", location: "Calgary, AB" },
   { src: "/chairs/bart2.jpeg", category: "Bar Tables", title: "Bar Table with Spandex Cover", location: "Calgary, AB" },
   { src: "/chairs/WhatsApp Image 2026-06-14 at 6.47.56 AM (2).jpeg", category: "Weddings", title: "Draped Wedding Tent Interior", location: "Calgary, AB" },
-  { src: "/chairs/WhatsApp Image 2026-06-14 at 10.17.29 PM.jpeg", category: "Bar Tables", title: "Bar Tables & Dance Floor Setup", location: "Calgary, AB" },
+
+  // Stage & dance floor — recently added
+  { src: "/stage/image.png", category: "Stage", title: "Portable Stage Platform", location: "Calgary, AB" },
+  { src: "/stage/stage2.jpeg", category: "Stage", title: "Stage with Stairs", location: "Calgary, AB" },
+  { src: "/stage/stage.jpeg", category: "Stage", title: "Stage & Dance Floor Setup", location: "Calgary, AB" },
+  { src: "/stage/stage3.jpeg", category: "Stage", title: "Dance Floor & Stage", location: "Calgary, AB" },
+
   { src: "/chairs/WhatsApp Image 2026-06-14 at 10.17.32 PM (4).jpeg", category: "Tables & Chairs", title: "Folding Chairs — White & Black", location: "Calgary, AB" },
   { src: "/chairs/WhatsApp Image 2026-06-14 at 6.47.56 AM.jpeg", category: "Tables & Chairs", title: "Banquet Chair — Gold Frame", location: "Calgary, AB" },
   { src: "/chairs/WhatsApp Image 2026-06-14 at 6.47.56 AM (1).jpeg", category: "Tables & Chairs", title: "Chair Cover with Gold Sash", location: "Calgary, AB" },
@@ -20,8 +26,6 @@ const photos = [
   { src: "/chairs/WhatsApp Image 2026-06-14 at 10.17.32 PM (1).jpeg", category: "Tables & Chairs", title: "Rectangular Table & Black Chair", location: "Calgary, AB" },
   { src: "/chairs/WhatsApp Image 2026-06-14 at 10.17.32 PM.jpeg", category: "Tables & Chairs", title: "Linen-Draped Rectangular Table", location: "Calgary, AB" },
   { src: "/chairs/WhatsApp Image 2026-06-14 at 10.17.32 PM (3).jpeg", category: "Tables & Chairs", title: "Wood Rectangular Banquet Table", location: "Calgary, AB" },
-  { src: "/chairs/WhatsApp Image 2026-06-14 at 10.17.31 PM (1).jpeg", category: "Bar Tables", title: "Round Bar Tables in Event Tent", location: "Calgary, AB" },
-  { src: "/chairs/WhatsApp Image 2026-06-14 at 10.17.31 PM.jpeg", category: "Festivals", title: "Portable Stage Platform", location: "Calgary, AB" },
 
   { src: "/all_above/5.jpeg", category: "Driveway", title: "High Peak Tent — Residential", location: "Calgary, AB" },
   { src: "/all_above/4.jpeg", category: "Residential", title: "Residential High Peak Tent", location: "Calgary, AB" },
