@@ -9,6 +9,8 @@ const categories = ["All", "Weddings", "Bar Tables", "Tables & Chairs", "Backyar
 
 const photos = [
   // Latest uploads first (newest at top) — June 2026 furniture & setups
+  { src: "/chairs/bart1.jpeg", category: "Bar Tables", title: "White Cocktail Bar Table", location: "Calgary, AB" },
+  { src: "/chairs/bart2.jpeg", category: "Bar Tables", title: "Bar Table with Spandex Cover", location: "Calgary, AB" },
   { src: "/chairs/WhatsApp Image 2026-06-14 at 6.47.56 AM (2).jpeg", category: "Weddings", title: "Draped Wedding Tent Interior", location: "Calgary, AB" },
   { src: "/chairs/WhatsApp Image 2026-06-14 at 10.17.29 PM.jpeg", category: "Bar Tables", title: "Bar Tables & Dance Floor Setup", location: "Calgary, AB" },
   { src: "/chairs/WhatsApp Image 2026-06-14 at 10.17.32 PM (4).jpeg", category: "Tables & Chairs", title: "Folding Chairs — White & Black", location: "Calgary, AB" },
@@ -23,7 +25,7 @@ const photos = [
 
   { src: "/all_above/5.jpeg", category: "Driveway", title: "High Peak Tent — Residential", location: "Calgary, AB" },
   { src: "/all_above/4.jpeg", category: "Residential", title: "Residential High Peak Tent", location: "Calgary, AB" },
-  { src: "/all_above/3.jpeg", category: "Commercial Parking", title: "Heated Tent — Winter Setup", location: "Calgary, AB" },
+  { src: "/all_above/3.jpeg", category: "Corporate", title: "Heated Tent — Winter Setup", location: "Calgary, AB" },
   { src: "/all_above/2.jpeg", category: "Festivals", title: "Market / Festival Setup", location: "Calgary, AB" },
   { src: "/all_above/1.jpeg", category: "Residential", title: "Commercial Parking Setup", location: "Calgary, AB" },
 
