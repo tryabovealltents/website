@@ -5,18 +5,28 @@ import Link from "next/link";
 import { ArrowRight, X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 
-const categories = ["All", "Weddings", "Backyard Parties", "Festivals", "Corporate", "Commercial", "Residential"];
+const categories = ["All", "Weddings", "Bar Tables", "Tables & Chairs", "Backyard Parties", "Festivals", "Corporate", "Commercial", "Residential"];
 
 const photos = [
-  // Latest uploads first (newest at top)
+  // Latest uploads first (newest at top) — June 2026 furniture & setups
+  { src: "/chairs/WhatsApp Image 2026-06-14 at 6.47.56 AM (2).jpeg", category: "Weddings", title: "Draped Wedding Tent Interior", location: "Calgary, AB" },
+  { src: "/chairs/WhatsApp Image 2026-06-14 at 10.17.29 PM.jpeg", category: "Bar Tables", title: "Bar Tables & Dance Floor Setup", location: "Calgary, AB" },
+  { src: "/chairs/WhatsApp Image 2026-06-14 at 10.17.32 PM (4).jpeg", category: "Tables & Chairs", title: "Folding Chairs — White & Black", location: "Calgary, AB" },
+  { src: "/chairs/WhatsApp Image 2026-06-14 at 6.47.56 AM.jpeg", category: "Tables & Chairs", title: "Banquet Chair — Gold Frame", location: "Calgary, AB" },
+  { src: "/chairs/WhatsApp Image 2026-06-14 at 6.47.56 AM (1).jpeg", category: "Tables & Chairs", title: "Chair Cover with Gold Sash", location: "Calgary, AB" },
+  { src: "/chairs/WhatsApp Image 2026-06-14 at 10.17.32 PM (2).jpeg", category: "Tables & Chairs", title: "Round Table & White Chrome-Leg Chair", location: "Calgary, AB" },
+  { src: "/chairs/WhatsApp Image 2026-06-14 at 10.17.32 PM (1).jpeg", category: "Tables & Chairs", title: "Rectangular Table & Black Chair", location: "Calgary, AB" },
+  { src: "/chairs/WhatsApp Image 2026-06-14 at 10.17.32 PM.jpeg", category: "Tables & Chairs", title: "Linen-Draped Rectangular Table", location: "Calgary, AB" },
+  { src: "/chairs/WhatsApp Image 2026-06-14 at 10.17.32 PM (3).jpeg", category: "Tables & Chairs", title: "Wood Rectangular Banquet Table", location: "Calgary, AB" },
+  { src: "/chairs/WhatsApp Image 2026-06-14 at 10.17.31 PM (1).jpeg", category: "Bar Tables", title: "Round Bar Tables in Event Tent", location: "Calgary, AB" },
+  { src: "/chairs/WhatsApp Image 2026-06-14 at 10.17.31 PM.jpeg", category: "Festivals", title: "Portable Stage Platform", location: "Calgary, AB" },
+
   { src: "/all_above/5.jpeg", category: "Driveway", title: "High Peak Tent — Residential", location: "Calgary, AB" },
   { src: "/all_above/4.jpeg", category: "Residential", title: "Residential High Peak Tent", location: "Calgary, AB" },
   { src: "/all_above/3.jpeg", category: "Commercial Parking", title: "Heated Tent — Winter Setup", location: "Calgary, AB" },
   { src: "/all_above/2.jpeg", category: "Festivals", title: "Market / Festival Setup", location: "Calgary, AB" },
   { src: "/all_above/1.jpeg", category: "Residential", title: "Commercial Parking Setup", location: "Calgary, AB" },
 
-  { src: "/images/tent1.jpg", category: "Weddings", title: "Elegant Frame Tent Setup", location: "Calgary, AB" },
-  { src: "/images/tent2.jpg", category: "Weddings", title: "High Peak Wedding Tent", location: "Airdrie, AB" },
   { src: "/images/tent3.jpg", category: "Festivals", title: "Festival Grounds Setup", location: "Calgary, AB" },
   { src: "/images/tent4.jpg", category: "Commercial", title: "Clear Roof Corporate Event", location: "Chestermere, AB" },
   { src: "/images/tent5.jpg", category: "Commercial", title: "Backyard Celebration", location: "Cochrane, AB" },
@@ -52,7 +62,7 @@ export default function GalleryPage() {
       <section className="relative bg-slate-900 pt-36 pb-24 overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-25"
-          style={{ backgroundImage: "url('/images/tent1.jpg')" }}
+          style={{ backgroundImage: "url('/all_above/1.jpeg')" }}
         />
         <div className="absolute inset-0 bg-linear-to-b from-slate-950/80 to-slate-900/90" />
         <div className="container relative z-10 mx-auto px-6 md:px-12 text-center">
@@ -76,7 +86,7 @@ export default function GalleryPage() {
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
             {photos.slice(0, 5).map((p, i) => (
               <div key={p.src} className="overflow-hidden rounded-lg bg-slate-100">
-                <img src={p.src} alt={p.title} className="w-full h-40 object-cover" />
+                <img src={p.src} alt={p.title} className="w-full h-52 object-cover" />
               </div>
             ))}
           </div>
@@ -110,13 +120,13 @@ export default function GalleryPage() {
             {filtered.map((photo, idx) => (
               <div
                 key={`${photo.src}-${idx}`}
-                className="break-inside-avoid group relative overflow-hidden rounded-2xl cursor-pointer img-zoom"
+                className="group relative overflow-hidden rounded-2xl cursor-pointer img-zoom aspect-[4/3]"
                 onClick={() => openLightbox(idx)}
               >
                 <img
                   src={photo.src}
                   alt={photo.title}
-                  className="w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">

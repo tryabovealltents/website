@@ -8,7 +8,7 @@ const accessories = [
   {
     category: "Furniture",
     tagline: "Seating & Tables",
-    items: ["Round banquet tables", "Rectangular tables", "Premium folding chairs", "Chiavari chairs"],
+    items: ["Round banquet tables", "Wood rectangular tables", "Bar & cocktail tables", "White & black folding chairs", "Banquet chairs", "Chair covers & sashes"],
     desc: "The right furniture sets the tone for your entire event. We supply clean, well-maintained tables and chairs suited to any style — from casual backyard gatherings to formal seated dinners.",
   },
   {

@@ -94,7 +94,7 @@ export default function PartyTentsPage() {
             </div>
             <div className="md:w-1/2">
               <div className="relative rounded-3xl overflow-hidden aspect-4/3 shadow-2xl img-zoom">
-                <Image src="/images/tent1.jpg" alt="Backyard party tent setup" fill className="object-cover" />
+                <Image src="/all_above/4.jpeg" alt="Backyard party tent setup" fill className="object-cover" />
               </div>
             </div>
           </div>
@@ -123,7 +123,7 @@ export default function PartyTentsPage() {
               <span className="text-xs font-bold tracking-widest text-amber-400 uppercase mb-3 block">Most Popular for Backyards</span>
               <h3 className="text-2xl font-extrabold mb-4">Frame Tents</h3>
               <div className="relative rounded-2xl overflow-hidden aspect-video mb-6 img-zoom">
-                <Image src="/images/tent1.jpg" alt="Frame tent for backyard party" fill className="object-cover" />
+                <Image src="/all_above/3.jpeg" alt="Frame tent for backyard party" fill className="object-cover" />
               </div>
               <p className="text-slate-300 font-light leading-relaxed mb-6">
                 Frame tents are the go-to choice for backyard parties. No center poles means maximum open space, and they work on any surface — grass, concrete, or decking.

@@ -43,7 +43,7 @@ export default function WeddingTentsPage() {
       {/* Hero */}
       <section className="relative bg-slate-900 pt-36 pb-28 overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="/images/tent2.jpg" alt="Wedding tent rental Calgary" fill className="object-cover opacity-35" />
+          <Image src="/all_above/1.jpeg" alt="Wedding tent rental Calgary" fill className="object-cover opacity-35" />
         </div>
         <div className="absolute inset-0 bg-linear-to-r from-slate-950/95 via-slate-900/70 to-transparent" />
         <div className="container relative z-10 mx-auto px-6 md:px-12">
@@ -166,7 +166,7 @@ export default function WeddingTentsPage() {
           </div>
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {[
-              { img: "/images/tent2.jpg", title: "High Peak Tents", desc: "Dramatic sweeping peaks create an elegant silhouette. Perfect for chandeliers and draping. The most popular choice for weddings." },
+              { img: "/all_above/1.jpeg", title: "High Peak Tents", desc: "Dramatic sweeping peaks create an elegant silhouette. Perfect for chandeliers and draping. The most popular choice for weddings." },
               { img: "/images/tent4.jpg", title: "Clear Roof Tents", desc: "Transparent panels let in natural light by day and showcase the stars at night. A luxury option for unforgettable evening receptions." },
             ].map((t) => (
               <div key={t.title} className="group relative rounded-3xl overflow-hidden aspect-4/3 img-zoom shadow-lg">

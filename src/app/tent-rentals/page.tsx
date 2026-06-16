@@ -11,7 +11,7 @@ const tents = [
     id: "frame",
     title: "Frame Tents",
     subtitle: "Best for tight spaces & patios",
-    image: "/images/tent1.jpg",
+    image: "/all_above/3.jpeg",
     description:
       "Frame tents use a freestanding aluminum frame with no center poles or stakes required. Maximum usable floor space makes them ideal for patios, parking lots, or any surface where staking isn't possible.",
     sizes: ["10×10", "10×20", "20×20", "20×40", "30×60"],
@@ -23,7 +23,7 @@ const tents = [
     id: "high-peak",
     title: "High Peak Tents",
     subtitle: "Elegant & dramatic for weddings",
-    image: "/images/tent2.jpg",
+    image: "/all_above/1.jpeg",
     description:
       "High peak tents feature dramatic sweeping peaks that create an elegant, upscale atmosphere. High ceilings allow for chandeliers, draping, and lighting that transform any outdoor space into a luxury venue.",
     sizes: ["20×20", "20×40", "40×40", "40×60"],
@@ -35,7 +35,7 @@ const tents = [
     id: "clear-roof",
     title: "Clear Roof Tents",
     subtitle: "Luxury open-sky experience",
-    image: "/images/image.png",
+    image: "/all_above/5.jpeg",
     description:
       "Clear roof tents offer a stunning open-sky experience while keeping guests protected from the elements. Perfect for evening events where guests can enjoy the stars, or daytime events where natural light is a priority.",
     sizes: ["20×40", "30×60", "40×80"],
@@ -74,7 +74,7 @@ export default function TentRentalsPage() {
     <div className="min-h-screen bg-white">
       <section className="relative bg-slate-900 pt-36 pb-24 overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="/images/tent2.jpg" alt="Premium tent rentals Calgary" fill className="object-cover opacity-30" />
+          <Image src="/all_above/1.jpeg" alt="Premium tent rentals Calgary" fill className="object-cover opacity-30" />
         </div>
         <div className="absolute inset-0 bg-linear-to-r from-slate-950/90 via-slate-900/70 to-transparent" />
         <div className="container relative z-10 mx-auto px-6 md:px-12">

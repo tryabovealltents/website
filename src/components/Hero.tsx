@@ -7,8 +7,8 @@ import { useState, useEffect } from "react";
 
 const slides = [
   { src: "/images/tent3.jpg", label: "Weddings" },
-  { src: "/images/tent2.jpg", label: "Festivals" },
-  { src: "/images/tent1.jpg", label: "Backyard Parties" },
+  { src: "/all_above/1.jpeg", label: "Festivals" },
+  { src: "/all_above/3.jpeg", label: "Backyard Parties" },
   { src: "/images/tent4.jpg", label: "Corporate Events" },
 ];
 
