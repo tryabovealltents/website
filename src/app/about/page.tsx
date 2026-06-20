@@ -198,6 +198,50 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* The Crew */}
+      <section className="py-20 md:py-28 bg-white border-t border-slate-100">
+        <div className="container mx-auto px-6 md:px-12">
+          <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center max-w-6xl mx-auto">
+            <ScrollReveal>
+              <div className="relative rounded-3xl overflow-hidden aspect-4/5 shadow-2xl img-zoom">
+                <img
+                  src="/all_above/image.png"
+                  alt="The Above All Tent & Party Rentals installation crew"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-linear-to-t from-slate-900/50 via-transparent to-transparent" />
+                <div className="absolute bottom-6 left-6 right-6">
+                  <div className="glass rounded-2xl p-4">
+                    <p className="text-white font-bold text-lg">Our Installation Crew</p>
+                    <p className="text-amber-300 text-sm">On-site across Calgary &amp; Alberta</p>
+                  </div>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={150}>
+              <div>
+                <span className="text-sm font-bold tracking-widest text-amber-600 uppercase mb-3 block">Meet the Crew</span>
+                <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 mb-6 leading-tight">
+                  The Team on the Ground.
+                </h2>
+                <p className="text-slate-600 leading-relaxed font-light text-lg mb-8">
+                  Behind every flawless setup is a hardworking crew. Our experienced installation team handles every tent, table, and detail with care — arriving on time, setting up fast, and making sure everything is perfect before your first guest arrives.
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {["Professional & uniformed", "Fast, careful installs", "Fully insured setups", "Friendly on-site service"].map((h) => (
+                    <div key={h} className="flex items-center gap-3 bg-slate-50 rounded-xl px-4 py-3">
+                      <div className="w-2 h-2 rounded-full bg-amber-500 shrink-0" />
+                      <span className="text-sm font-semibold text-slate-700">{h}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
       {/* Story */}
       <section className="py-20 md:py-28 bg-slate-50">
         <div className="container mx-auto px-6 md:px-12">

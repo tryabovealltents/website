@@ -5,10 +5,12 @@ import Link from "next/link";
 import { ArrowRight, X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 
-const categories = ["All", "Weddings", "Bar Tables", "Stage", "Tables & Chairs", "Backyard Parties", "Festivals", "Corporate", "Commercial", "Residential"];
+const categories = ["All", "Weddings", "Bar Tables", "Stage", "Dance Floor", "Tables & Chairs", "Backyard Parties", "Festivals", "Corporate", "Commercial", "Residential"];
 
 const photos = [
   // Latest uploads first (newest at top) — June 2026 furniture & setups
+  { src: "/all_above/image.png", category: "Festivals", title: "The Above All Crew On-Site", location: "Calgary, AB" },
+  { src: "/dancing_floor/image.png", category: "Dance Floor", title: "Wood Dance Floor", location: "Calgary, AB" },
   { src: "/chairs/bart1.jpeg", category: "Bar Tables", title: "White Cocktail Bar Table", location: "Calgary, AB" },
   { src: "/chairs/bart2.jpeg", category: "Bar Tables", title: "Bar Table with Spandex Cover", location: "Calgary, AB" },
   { src: "/chairs/WhatsApp Image 2026-06-14 at 6.47.56 AM (2).jpeg", category: "Weddings", title: "Draped Wedding Tent Interior", location: "Calgary, AB" },
@@ -126,7 +128,7 @@ export default function GalleryPage() {
             {filtered.map((photo, idx) => (
               <div
                 key={`${photo.src}-${idx}`}
-                className="group relative overflow-hidden rounded-2xl cursor-pointer img-zoom aspect-[4/3]"
+                className="group relative overflow-hidden rounded-2xl cursor-pointer img-zoom aspect-4/3"
                 onClick={() => openLightbox(idx)}
               >
                 <img
