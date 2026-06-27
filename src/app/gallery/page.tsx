@@ -8,7 +8,15 @@ import ScrollReveal from "@/components/ScrollReveal";
 const categories = ["All", "Weddings", "Bar Tables", "Stage", "Dance Floor", "Tables & Chairs", "Backyard Parties", "Festivals", "Corporate", "Commercial", "Residential"];
 
 const photos = [
-  // Latest uploads first (newest at top) — June 2026 furniture & setups
+  // Latest uploads first (newest at top) — June 2026 weddings & events
+  { src: "/wedding/w6.png", category: "Weddings", title: "Farm Wedding Reception Setup", location: "Calgary, AB" },
+  { src: "/stage/s.png", category: "Stage", title: "Outdoor Event Stage & Seating", location: "Calgary, AB" },
+  { src: "/wedding/w5.png", category: "Weddings", title: "Clear-Wall Reception Tent", location: "Calgary, AB" },
+  { src: "/wedding/w4.png", category: "Weddings", title: "High Peak Tent with Clear Top", location: "Calgary, AB" },
+  { src: "/wedding/w2.png", category: "Weddings", title: "Farm Wedding Tents & Dance Floor", location: "Calgary, AB" },
+  { src: "/stage/s1.png", category: "Stage", title: "Stage with Stairs & Reserved Seating", location: "Calgary, AB" },
+  { src: "/wedding/w3.png", category: "Corporate", title: "Frame Tent — Commercial Setup", location: "Calgary, AB" },
+  { src: "/wedding/w1.png", category: "Weddings", title: "Forest Wedding Tent Setup", location: "Calgary, AB" },
   { src: "/all_above/image.png", category: "Festivals", title: "The Above All Crew On-Site", location: "Calgary, AB" },
   { src: "/dancing_floor/image.png", category: "Dance Floor", title: "Wood Dance Floor", location: "Calgary, AB" },
   { src: "/chairs/bart1.jpeg", category: "Bar Tables", title: "White Cocktail Bar Table", location: "Calgary, AB" },

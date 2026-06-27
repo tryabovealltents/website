@@ -308,6 +308,7 @@ export default function ContactPage() {
                       className="w-full px-5 py-4 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-all outline-none appearance-none"
                     >
                       <option value="Not sure">Not sure (Calculate based on guests)</option>
+                      <option value="10x20">10x20</option>
                       <option value="20x20">20x20</option>
                       <option value="20x40">20x40</option>
                       <option value="30x60">30x60</option>
