@@ -9,6 +9,7 @@ const categories = ["All", "Weddings", "Bar Tables", "Stage", "Dance Floor", "Ta
 
 const photos = [
   // Latest uploads first (newest at top) — June 2026 weddings & events
+  { src: "/bbq/bbq.jpeg", category: "Backyard Parties", title: "Canada Day BBQ Party", location: "Carseland, AB" },
   { src: "/wedding/w6.png", category: "Weddings", title: "Farm Wedding Reception Setup", location: "Calgary, AB" },
   { src: "/stage/s.png", category: "Stage", title: "Outdoor Event Stage & Seating", location: "Calgary, AB" },
   { src: "/wedding/w5.png", category: "Weddings", title: "Clear-Wall Reception Tent", location: "Calgary, AB" },
