@@ -9,6 +9,7 @@ const categories = ["All", "Weddings", "Frame Tent", "Marquee Tent with Clear Wa
 
 const photos = [
   // Latest uploads first (newest at top) — June 2026 weddings & events
+  { src: "/tent/t5.jpeg", category: "Frame Tent", title: "Frame Tent — Red Carpet Event", location: "Calgary, AB" },
   { src: "/tent/t2.jpeg", category: "Frame Tent", title: "Frame Tent — Open A-Frame", location: "Calgary, AB" },
   { src: "/tent/t3.jpeg", category: "Frame Tent", title: "Frame Tent — Windowed Walls", location: "Calgary, AB" },
   { src: "/tent/t4.jpeg", category: "Frame Tent", title: "Frame Tent with Event Flooring", location: "Calgary, AB" },
