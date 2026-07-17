@@ -9,7 +9,7 @@ const founders = [
   {
     name: "Prabh Sidhu",
     title: "Co-Founder & Operations Lead",
-    photo: "/images/WhatsApp Image 2026-03-18 at 5.55.29 AM (1).jpeg",
+    photo: "/all_above/image.png",
     tagline: "The man who gets it done.",
     bio: [
       "Prabh brings over a decade of real, hands-on experience in the outdoor services industry. He's not someone who learned from a textbook — he learned by doing. From managing large-scale outdoor setups to coordinating complex event logistics in unpredictable Canadian weather, Prabhjit has seen it all.",
@@ -26,7 +26,7 @@ const founders = [
   {
     name: "Gurnam Singh",
     title: "Co-Founder & Client Experience",
-    photo: "/images/WhatsApp Image 2026-03-18 at 5.55.29 AM (2).jpeg",
+    photo: "/all_above/image.png",
     tagline: "The heart behind every event.",
     bio: [
       "Gurnam is the reason clients feel taken care of from the very first call. With years of experience in customer service and community event coordination, He has a natural gift for understanding what people need — and making sure they get it.",

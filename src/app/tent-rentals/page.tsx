@@ -11,7 +11,7 @@ const tents = [
     id: "frame",
     title: "Frame Tents",
     subtitle: "Best for tight spaces & patios",
-    image: "/all_above/3.jpeg",
+    image: "/tent/t2.jpeg",
     description:
       "Frame tents use a freestanding aluminum frame with no center poles or stakes required. Maximum usable floor space makes them ideal for patios, parking lots, or any surface where staking isn't possible.",
     sizes: ["10×10", "10×20", "20×20", "20×40", "30×60"],
@@ -35,7 +35,7 @@ const tents = [
     id: "clear-roof",
     title: "Clear Roof Tents",
     subtitle: "Luxury open-sky experience",
-    image: "/all_above/5.jpeg",
+    image: "/wedding/w4.png",
     description:
       "Clear roof tents offer a stunning open-sky experience while keeping guests protected from the elements. Perfect for evening events where guests can enjoy the stars, or daytime events where natural light is a priority.",
     sizes: ["20×40", "30×60", "40×80"],

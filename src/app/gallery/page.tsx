@@ -5,7 +5,7 @@ import Link from "next/link";
 import { ArrowRight, X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 
-const categories = ["All", "Weddings", "Frame Tent", "Marquee Tent with Clear Walls", "Pop Up Canopy Tents", "Bar Tables", "Stage", "Dance Floor", "Tables & Chairs", "Backyard Summer Party", "Backyard Parties", "Festivals", "Corporate", "Commercial", "Residential"];
+const categories = ["All", "Weddings", "Frame Tent", "Clear Roof Tents", "Marquee Tent with Clear Walls", "Pop Up Canopy Tents", "Bar Tables", "Stage", "Dance Floor", "Tables & Chairs", "Backyard Summer Party", "Backyard Parties", "Festivals", "Corporate", "Commercial", "Residential"];
 
 const photos = [
   // Latest uploads first (newest at top) — June 2026 weddings & events
@@ -17,8 +17,8 @@ const photos = [
   { src: "/tent/popuptent.jpeg", category: "Pop Up Canopy Tents", title: "Pop Up Canopy Tents", location: "Calgary, AB" },
   { src: "/marqee tents/mt1.jpeg", category: "Marquee Tent with Clear Walls", title: "Marquee Tent with Clear Walls", location: "Calgary, AB" },
   { src: "/backyard_party/bp1.jpeg", category: "Backyard Summer Party", title: "Backyard Summer Party", location: "Calgary, AB" },
-  { src: "/bbq/bbq.jpeg", category: "Backyard Parties", title: "Canada Day BBQ Party", location: "Carseland, AB" },
-  { src: "/bbq/bbq2.jpeg", category: "Backyard Parties", title: "Community BBQ Tent Setup", location: "Carseland, AB" },
+  { src: "/bbq/bbq.jpeg", category: "Clear Roof Tents", title: "Clear Roof Tent — Canada Day BBQ", location: "Carseland, AB" },
+  { src: "/bbq/bbq2.jpeg", category: "Clear Roof Tents", title: "Clear Roof Tent — Community BBQ", location: "Carseland, AB" },
   { src: "/wedding/w6.png", category: "Weddings", title: "Farm Wedding Reception Setup", location: "Calgary, AB" },
   { src: "/stage/s.png", category: "Stage", title: "Outdoor Event Stage & Seating", location: "Calgary, AB" },
   { src: "/wedding/w5.png", category: "Weddings", title: "Clear-Wall Reception Tent", location: "Calgary, AB" },
@@ -47,7 +47,7 @@ const photos = [
   { src: "/chairs/WhatsApp Image 2026-06-14 at 10.17.32 PM.jpeg", category: "Tables & Chairs", title: "Linen-Draped Rectangular Table", location: "Calgary, AB" },
   { src: "/chairs/WhatsApp Image 2026-06-14 at 10.17.32 PM (3).jpeg", category: "Tables & Chairs", title: "Wood Rectangular Banquet Table", location: "Calgary, AB" },
 
-  { src: "/all_above/5.jpeg", category: "Driveway", title: "High Peak Tent — Residential", location: "Calgary, AB" },
+  { src: "/all_above/5.jpeg", category: "Backyard Parties", title: "Backyard Party Tent — Winter Setup", location: "Calgary, AB" },
   { src: "/all_above/4.jpeg", category: "Residential", title: "Residential High Peak Tent", location: "Calgary, AB" },
   { src: "/all_above/3.jpeg", category: "Corporate", title: "Heated Tent — Winter Setup", location: "Calgary, AB" },
   { src: "/all_above/2.jpeg", category: "Festivals", title: "Market / Festival Setup", location: "Calgary, AB" },
