@@ -2,13 +2,18 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { ArrowLeft, ArrowRight, X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
+import { ArrowLeft, ArrowRight, X, ChevronLeft, ChevronRight, ZoomIn, Play } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 
 const categories = ["All", "Weddings", "Frame Tent", "Clear Roof Tents", "Marquee Tent with Clear Walls", "Pop Up Canopy Tents", "Bar Tables", "Stage", "Dance Floor", "Tables & Chairs", "Backyard Summer Party", "Backyard Parties", "Festivals", "Corporate", "Commercial", "Residential"];
 
 const photos = [
-  // Latest uploads first (newest at top) — Aug 2026 heavy-duty commercial pop-up canopy (10x10)
+  // Latest uploads first (newest at top) — Aug 2026 dance floors
+  { src: "/dancing_floor/dancevideo.mp4", category: "Dance Floor", title: "Dance Floor Walkthrough", location: "Calgary, AB" },
+  { src: "/dancing_floor/dance2.jpeg", category: "Dance Floor", title: "Wood Dance Floor in Draped Tent", location: "Calgary, AB" },
+  { src: "/dancing_floor/dance3.jpeg", category: "Dance Floor", title: "Dance Floor with String Lights & Disco Ball", location: "Calgary, AB" },
+
+  // Aug 2026 heavy-duty commercial pop-up canopy (10x10)
   { src: "/commercial_canopy/WhatsApp Image 2026-08-15 at 7.45.15 PM.jpeg", category: "Pop Up Canopy Tents", title: "Heavy-Duty Commercial Pop-Up Canopy (10×10)", location: "Calgary, AB" },
   { src: "/commercial_canopy/WhatsApp Image 2026-08-15 at 7.45.12 PM.jpeg", category: "Pop Up Canopy Tents", title: "Row of 10×10 Commercial Canopies", location: "Calgary, AB" },
   { src: "/commercial_canopy/WhatsApp Image 2026-08-14 at 11.19.04 AM.jpeg", category: "Pop Up Canopy Tents", title: "10×10 Pop-Up Canopy with Sidewalls", location: "Calgary, AB" },
@@ -89,12 +94,15 @@ const photos = [
   { src: "/images/10.jpeg", category: "Backyard Parties", title: "High Peak Tent – Full Enclosure", location: "Calgary, AB" },
 ];
 
+const isVideo = (src: string) => /\.(mp4|webm|mov)$/i.test(src);
+
 // Build one "folder" per category (excluding "All"), using the first photo as the cover.
 const folders = categories
   .filter((cat) => cat !== "All")
   .map((cat) => {
     const inCat = photos.filter((p) => p.category === cat);
-    return { name: cat, cover: inCat[0]?.src ?? "", count: inCat.length };
+    const cover = (inCat.find((p) => !isVideo(p.src)) ?? inCat[0])?.src ?? "";
+    return { name: cat, cover, count: inCat.length };
   })
   .filter((f) => f.count > 0);
 
@@ -158,7 +166,7 @@ export default function GalleryPage() {
         <div className="container mx-auto px-6 md:px-12">
           <h3 className="text-2xl font-extrabold mb-4">Latest Uploads</h3>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
-            {photos.slice(0, 5).map((p, i) => (
+            {photos.filter((p) => !isVideo(p.src)).slice(0, 5).map((p) => (
               <div key={p.src} className="overflow-hidden rounded-lg bg-slate-100">
                 <img src={p.src} alt={p.title} className="w-full h-52 object-cover" />
               </div>
@@ -182,7 +190,7 @@ export default function GalleryPage() {
                 </div>
               </ScrollReveal>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <FolderCard name="All Photos" cover={photos[0].src} count={photos.length} onClick={() => openCategory("All")} />
+                <FolderCard name="All Photos" cover={photos.find((p) => !isVideo(p.src))?.src ?? photos[0].src} count={photos.length} onClick={() => openCategory("All")} />
                 {folders.map((f) => (
                   <FolderCard key={f.name} name={f.name} cover={f.cover} count={f.count} onClick={() => openCategory(f.name)} />
                 ))}
@@ -213,17 +221,36 @@ export default function GalleryPage() {
                 className="group relative overflow-hidden rounded-2xl cursor-pointer img-zoom aspect-4/3"
                 onClick={() => openLightbox(idx)}
               >
-                <img
-                  src={photo.src}
-                  alt={photo.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
+                {isVideo(photo.src) ? (
+                  <video
+                    src={photo.src}
+                    muted
+                    playsInline
+                    preload="metadata"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                ) : (
+                  <img
+                    src={photo.src}
+                    alt={photo.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                )}
                 <div className="absolute inset-0 bg-linear-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
-                    <ZoomIn className="w-5 h-5 text-white" />
+                {isVideo(photo.src) ? (
+                  /* Play icon — always visible for videos */
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-14 h-14 bg-black/45 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-amber-500 transition-colors duration-300">
+                      <Play className="w-6 h-6 text-white fill-white ml-0.5" />
+                    </div>
                   </div>
-                </div>
+                ) : (
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                      <ZoomIn className="w-5 h-5 text-white" />
+                    </div>
+                  </div>
+                )}
                 <div className="absolute bottom-0 left-0 right-0 p-5 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
                   <p className="text-white font-bold text-sm">{photo.title}</p>
                   <p className="text-slate-300 text-xs mt-1">{photo.location}</p>
@@ -270,11 +297,21 @@ export default function GalleryPage() {
             className="max-w-4xl max-h-[85vh] relative"
             onClick={(e) => e.stopPropagation()}
           >
-            <img
-              src={filtered[lightboxIndex].src}
-              alt={filtered[lightboxIndex].title}
-              className="max-h-[80vh] max-w-full object-contain rounded-xl"
-            />
+            {isVideo(filtered[lightboxIndex].src) ? (
+              <video
+                src={filtered[lightboxIndex].src}
+                controls
+                autoPlay
+                playsInline
+                className="max-h-[80vh] max-w-full object-contain rounded-xl"
+              />
+            ) : (
+              <img
+                src={filtered[lightboxIndex].src}
+                alt={filtered[lightboxIndex].title}
+                className="max-h-[80vh] max-w-full object-contain rounded-xl"
+              />
+            )}
             <div className="mt-4 text-center">
               <p className="text-white font-bold">{filtered[lightboxIndex].title}</p>
               <p className="text-slate-400 text-sm">{filtered[lightboxIndex].location}</p>
