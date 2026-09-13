@@ -5,10 +5,16 @@ import Link from "next/link";
 import { ArrowLeft, ArrowRight, X, ChevronLeft, ChevronRight, ZoomIn, Play } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 
-const categories = ["All", "Weddings", "Frame Tent", "Clear Roof Tents", "Marquee Tent with Clear Walls", "Pop Up Canopy Tents", "Bar Tables", "Stage", "Dance Floor", "Tables & Chairs", "Backyard Summer Party", "Backyard Parties", "Festivals", "Corporate", "Commercial", "Residential"];
+const categories = ["All", "Weddings", "Frame Tent", "Clear Roof Tents", "Marquee Tent with Clear Walls", "Pop Up Canopy Tents", "Bar Tables", "Stage", "Dance Floor", "Patio Heater", "Tables & Chairs", "Backyard Summer Party", "Backyard Parties", "Festivals", "Corporate", "Commercial", "Residential"];
 
 const photos = [
-  // Latest uploads first (newest at top) — Aug 2026 dance floors
+  // Latest uploads first (newest at top) — Sep 2026 clear roof tents & patio heater
+  { src: "/clear_roof_tents/cr3.png", category: "Clear Roof Tents", title: "Clear Roof Tent — Wedding Reception", location: "Calgary, AB" },
+  { src: "/patio_heater/image.png", category: "Patio Heater", title: "Patio Heater & Fire Table Setup", location: "Calgary, AB" },
+  { src: "/clear_roof_tents/cr1.png", category: "Clear Roof Tents", title: "Clear Roof Tents — Backyard", location: "Calgary, AB" },
+  { src: "/clear_roof_tents/cr2.png", category: "Clear Roof Tents", title: "Clear Roof Tent with Sidewalls", location: "Calgary, AB" },
+
+  // Aug 2026 dance floors
   { src: "/dancing_floor/dancevideo.mp4", category: "Dance Floor", title: "Dance Floor Walkthrough", location: "Calgary, AB" },
   { src: "/dancing_floor/dance2.jpeg", category: "Dance Floor", title: "Wood Dance Floor in Draped Tent", location: "Calgary, AB" },
   { src: "/dancing_floor/dance3.jpeg", category: "Dance Floor", title: "Dance Floor with String Lights & Disco Ball", location: "Calgary, AB" },
